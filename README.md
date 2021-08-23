@@ -13,7 +13,7 @@ parse datasets hosted in this repository. For example, the *graph9*
 dataset can be automatically downloaded and imported with the following code:
 ```python
 >>> import pygrank as pg
->>> graph, groups = pg.load_one_community('graph9')
+>>> graph, groups = next(pg.load_one_community('graph9'))
 ```
 
 
