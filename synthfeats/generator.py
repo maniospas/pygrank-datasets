@@ -1,10 +1,13 @@
 import random
 
 rnd = random.Random(0)
-nodes = 600
-groups = [list(range(300)), list(range(300, nodes))]
+nodes = 1200
+groups = [list(range(300)), list(range(300, nodes//2)), list(range(nodes//2, nodes))]
 pairs = list()
-features = [[rnd.random()+(0.5 if i < 300 else 0), rnd.random()+(0.5 if i > 300 else 0)] for i in range(nodes)]
+features = [[rnd.random()*0.3+(0.5 if i < 300 or i >= nodes/2 else 0),
+             rnd.random()*0.3+(0.5 if i > 300 else 0),
+             rnd.random()*0.3+(0.5 if i < nodes/2 else 0),
+             ] for i in range(nodes)]
 for i in range(nodes):
     for j in range(nodes):
         prob = 0.1 if (i < 300)==(j < 300) else 0.05
