@@ -4,7 +4,7 @@ rnd = random.Random(0)
 nodes = 1200
 groups = [list(range(300)), list(range(300, nodes//2)), list(range(nodes//2, nodes))]
 pairs = list()
-noise = 0.2
+noise = 0.1
 features = [[rnd.random()*noise+(0.5 if i < 300 or i >= nodes/2 else 0),
              rnd.random()*noise+(0.5 if i > 300 else 0),
              rnd.random()*noise+(0.5 if i < nodes/2 else 0),
@@ -24,7 +24,7 @@ for group_i in range(3):
     for group_j in range(3):
         for i in groups[group_i]:
             for j in groups[group_j]:
-                prob = 0.15 if group_i==group_j else 0.05
+                prob = 0.15 if group_i == group_j else 0.05
                 if rnd.uniform(0, 1) < prob:
                     pairs.append((i, j))
 
