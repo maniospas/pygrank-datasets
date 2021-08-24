@@ -9,14 +9,14 @@ features = [[rnd.random()*0.3+(0.5 if i < 300 or i >= nodes/2 else 0),
              rnd.random()*0.3+(0.5 if i < nodes/2 else 0),
              ]
             +
-            [rnd.random() * 0.3 + (0.5 if i < 300 or i >= nodes / 2 else 0),
-             rnd.random() * 0.3 + (0.5 if i > 300 else 0),
-             rnd.random() * 0.3 + (0.5 if i < nodes / 2 else 0),
+            [rnd.random() * 0.2 + (0.5 if i < 300 or i >= nodes / 2 else 0),
+             rnd.random() * 0.2 + (0.5 if i > 300 else 0),
+             rnd.random() * 0.2 + (0.5 if i < nodes / 2 else 0),
              ]
             +
-            [rnd.random()*0.3+(0.5 if i < 300 or i >= nodes/2 else 0),
-             rnd.random()*0.3+(0.5 if i > 300 else 0),
-             rnd.random()*0.3+(0.5 if i < nodes/2 else 0),
+            [rnd.random()*0.1+(0.5 if i < 300 or i >= nodes/2 else 0),
+             rnd.random()*0.1+(0.5 if i > 300 else 0),
+             rnd.random()*0.1+(0.5 if i < nodes/2 else 0),
              ]for i in range(nodes)]
 for i in range(nodes):
     for j in range(nodes):
